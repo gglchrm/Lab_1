@@ -23,11 +23,9 @@ for line in reader:
 	if line.get('msisdn_origin') == number:
 		out_call_duration += float(line.get('call_duration'))
 		sms_number += int(line.get('sms_number'))
-		print(out_call_duration, sms_number)
 
 	if line.get('msisdn_dest') == number:
 		in_call_duration += float(line.get('call_duration'))
-		print(in_call_duration)
 
 print(payment(2, 0, 1, out_call_duration, in_call_duration, sms_number))
 
